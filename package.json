@@ -1,7 +1,7 @@
 {
   "name": "react-trial",
   "version": "0.1.0",
-  "private": "MIT",
+  "private": "WTFPL",
   "homepage": "https://avm-martin.github.io/Web-ReactTutorial",
   "dependencies": {
     "gh-pages": "^2.0.1",
