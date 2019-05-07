@@ -50,7 +50,7 @@ class Board extends React.Component {
   render() {
     const SIZE = 3;
     const RANGE = [...Array(SIZE).keys()];
-    
+
     return (
       <div>
         {RANGE.map((row_number) => {
@@ -77,6 +77,23 @@ class Game extends React.Component {
       stepNumber: 0,
       xIsNext: true,
     };
+  }
+
+  getPosition(index) {
+    const SIZE = 3;
+
+    const history = this.state.history.slice();
+    const current = history[index].squares.slice();
+    const before = history[index-1].squares.slice();
+
+    for (let row_number=0; row_number<SIZE; row_number++) {
+      for (let col_number=0; col_number<SIZE; col_number++) {
+        let position = SIZE*row_number + col_number;
+        if (current[position] !== before[position]) {
+          return col_number + ',' + row_number;
+        }
+      }
+    }
   }
 
   handleClick(i) {
@@ -110,7 +127,7 @@ class Game extends React.Component {
 
     const moves = history.map((step, move) => {
       const desc = move ?
-        'Go to move #' + move:
+        'Go to move #' + move + ' at ' + this.getPosition(move):
         'Go to game start';
       return (
         <li key={move}>
