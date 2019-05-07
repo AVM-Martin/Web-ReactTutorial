@@ -53,6 +53,10 @@ ol, ul {
 	font-weight: bold;
 }
 
+.square-highlight {
+	background: yellow;
+}
+
 /*
 body {
 	margin: 0;
