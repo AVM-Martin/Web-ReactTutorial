@@ -39,6 +39,16 @@ function Square(props) {
   );
 }
 
+function ToggleButton(props){
+  return (
+    <div>
+      <button onClick={props.onClick}>
+        {props.value}
+      </button>
+    </div>
+  );
+}
+
 class Board extends React.Component {
   renderSquare(i) {
     return (
@@ -82,6 +92,7 @@ class Game extends React.Component {
         squares: Array(9).fill(null),
         highlight: Array(9).fill(false),
       }],
+      isAscendingOrder: true,
       stepNumber: 0,
       xIsNext: true,
     };
@@ -127,7 +138,7 @@ class Game extends React.Component {
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2) === 0,
-    })
+    });
   }
 
   render() {
@@ -138,9 +149,9 @@ class Game extends React.Component {
     const winner = calculateWinner(current.squares, current.highlight);
 
     const moves = history.map((step, move) => {
-      const desc = move ?
-        'Go to move #' + move + ' at ' + this.getPosition(move):
-        'Go to game start';
+      const desc = move
+        ? 'Go to move #' + move + ' at ' + this.getPosition(move)
+        : 'Go to game start';
       return (
         <li key={move}>
           <button
@@ -152,6 +163,9 @@ class Game extends React.Component {
         </li>
       );
     });
+    const display_moves = this.state.isAscendingOrder===true
+      ? moves
+      : moves.reverse();
 
     let status;
     if (this.state.stepNumber===SIZE*SIZE && !winner) {
@@ -170,6 +184,14 @@ class Game extends React.Component {
             highlight={current.highlight}
             onClick={(i) => this.handleClick(i)}
           />
+          <br />
+          <ToggleButton
+            value={this.state.isAscendingOrder===true
+              ? "Ascending"
+              : "Descending"
+            }
+            onClick={() => this.toggleHistory()}
+          />
         </div>
         <div className="game-info">
           <div>{status}</div>
@@ -177,6 +199,12 @@ class Game extends React.Component {
         </div>
       </div>
     );
+  }
+
+  toggleHistory(){
+    this.setState({
+      isAscendingOrder: !this.state.isAscendingOrder,
+    });
   }
 }
 
