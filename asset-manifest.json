@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Web-ReactTutorial/static/css/main.dbeee5b3.chunk.css",
-    "main.js": "/Web-ReactTutorial/static/js/main.fd6320b8.chunk.js",
-    "main.js.map": "/Web-ReactTutorial/static/js/main.fd6320b8.chunk.js.map",
+    "main.js": "/Web-ReactTutorial/static/js/main.72ec723f.chunk.js",
+    "main.js.map": "/Web-ReactTutorial/static/js/main.72ec723f.chunk.js.map",
     "runtime~main.js": "/Web-ReactTutorial/static/js/runtime~main.9178418f.js",
     "runtime~main.js.map": "/Web-ReactTutorial/static/js/runtime~main.9178418f.js.map",
-    "static/js/2.0e3f6a1a.chunk.js": "/Web-ReactTutorial/static/js/2.0e3f6a1a.chunk.js",
-    "static/js/2.0e3f6a1a.chunk.js.map": "/Web-ReactTutorial/static/js/2.0e3f6a1a.chunk.js.map",
+    "static/js/2.2e924f3b.chunk.js": "/Web-ReactTutorial/static/js/2.2e924f3b.chunk.js",
+    "static/js/2.2e924f3b.chunk.js.map": "/Web-ReactTutorial/static/js/2.2e924f3b.chunk.js.map",
     "index.html": "/Web-ReactTutorial/index.html",
-    "precache-manifest.e87fc82870f8d8a47d32002e2747e57d.js": "/Web-ReactTutorial/precache-manifest.e87fc82870f8d8a47d32002e2747e57d.js",
+    "precache-manifest.c5f44db519a62a8066c2c4c5c28fe017.js": "/Web-ReactTutorial/precache-manifest.c5f44db519a62a8066c2c4c5c28fe017.js",
     "service-worker.js": "/Web-ReactTutorial/service-worker.js",
     "static/css/main.dbeee5b3.chunk.css.map": "/Web-ReactTutorial/static/css/main.dbeee5b3.chunk.css.map"
   }
